@@ -59,21 +59,21 @@ const Navigations = ({ direction }: { direction?: string }) => {
         </motion.li>
       </motion.ul> */}
 
-      <motion.div
+      {/* <motion.div
         whileTap={{ scale: 0.9 }}
         whileHover={{ scale: 1.1 }}
         className="relative flex items-center justify-center text-textColor"
         onClick={handleToggleCart}
       >
         <MdShoppingBasket className="text-2xl cursor-pointer" />
-        {/*{cartItems && (
+        {cartItems && (
           <div className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-cartNumBg flex items-center justify-center cursor-pointer">
             <p className="text-sm text-white font-semibold">
               {cartItems.length}
             </p>
           </div>
-        )}*/}
-      </motion.div>
+        )}
+      </motion.div> */}
     </div>
   );
 };

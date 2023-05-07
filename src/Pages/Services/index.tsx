@@ -1,3 +1,4 @@
+import { useLocation } from "react-router-dom";
 import RecipeCard from "../../components/Sections/Recipes";
 
 
@@ -35,6 +36,8 @@ const recipes = [
 ];
 
 const Services = () => {
+  const location = useLocation();
+  /* const { cartItems } = location.state; */
   console.log()
   return (
     <>
