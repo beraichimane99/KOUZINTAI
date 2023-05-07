@@ -4,7 +4,10 @@ import {useStateValue} from '../../context/StateProvider';
 import {useEffect} from "react";
 
 const CartBody = ({cartItems, setCartItems, action}: { cartItems: any, setCartItems:any, action: any }) => {
+    
     // const [{cartItems}] = useStateValue();
+    console.log(cartItems);
+
     return (
         <div className='w-full h-full rounded-t-[2rem]  bg-cartBg flex flex-col'>
             <div className='w-full md:h-42 px-6 py-10 flex flex-col gap-3 overflow-y-scroll scrollbar-hidden'>
