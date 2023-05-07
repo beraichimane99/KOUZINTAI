@@ -2,7 +2,6 @@ export type foodItemStatic = {
   id: number;
   title: string;
   desc: string;
-  price: string;
   imgSrc: string;
 }
 export type foodItemsStatic = {
