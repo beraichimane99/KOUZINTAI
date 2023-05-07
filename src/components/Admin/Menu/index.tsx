@@ -39,9 +39,9 @@ const Menu = () => {
       </div>
       <div className="w-full flex items-center justify-center gap-3 overflow-x-hidden flex-wrap">
         {
-            filteredFoodItems.map((item: FoodItem) => (
-                <SingleFoodItem key={item.id} item={item} col admin />
-            ))
+            // filteredFoodItems.map((item: FoodItem) => (
+            //     <SingleFoodItem key={item.id} item={item} col admin />
+            // ))
         }
       </div>
     </div>

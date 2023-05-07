@@ -5,9 +5,10 @@ import { motion } from "framer-motion";
 import EmptyCart from "../EmptyCart";
 import NotFound from "../NotFound";
 import Checkout from "../Checkout";
-import { useState } from "react";
-const Cart = () => {
-  const [{ cartItems }] = useStateValue();
+import {useEffect, useState} from "react";
+// @ts-ignore
+const Cart = ({cartItems, setCartItems}) => {
+  // const [{ cartItems }] = useStateValue();
   const [checkoutOpen, setCheckoutOpen] = useState(false);
   return (
     <>
@@ -23,7 +24,7 @@ const Cart = () => {
           >
             <CarttHeader />
             {cartItems && cartItems.length > 0 ? (
-              <CartBody action={setCheckoutOpen} />
+              <CartBody cartItems={cartItems} setCartItems={setCartItems} action={setCheckoutOpen} />
             ) : (
               <div className="h-full w-full flex-1 flex items-center justify-center">
                 <EmptyCart />

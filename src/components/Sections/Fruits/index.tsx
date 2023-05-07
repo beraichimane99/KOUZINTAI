@@ -15,7 +15,7 @@ const Fruits = () => {
           <Title title="Our fresh & healthy fruits" />
           <PrevNextButtons onNext={() => setScrollValue(10000)} onPrev = {() => setScrollValue(-10000)} />
         </div>
-        <Container className="bg-containerbg" scrollOffset = {scrollValue} items = {fruits} />
+        {/*<Container className="bg-containerbg" scrollOffset = {scrollValue} items = {fruits} />*/}
     </section>
   )
 }

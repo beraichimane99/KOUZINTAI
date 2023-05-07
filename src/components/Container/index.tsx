@@ -8,7 +8,7 @@ import NotFound from "../NotFound";
 import { isAdmin } from "../../utils/functions";
 import { useStateValue } from "../../context/StateProvider";
 
-const Container = ({scrollOffset, col, items, className }: {scrollOffset:number, col?: boolean; items: FoodItem[], className?:string }) => {
+const Container = ({scrollOffset, col, foodItems, className, setFoodItems, cartItems, setCartItems }: {scrollOffset:number, col?: boolean; foodItems: any[], className?:string, setFoodItems: any, cartItems: any, setCartItems: any }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   useLayoutEffect(() => {
     if(null !== containerRef.current){
@@ -22,18 +22,18 @@ const Container = ({scrollOffset, col, items, className }: {scrollOffset:number,
       initial={{ opacity: 0, x: 200 }}
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: 200 }}
-      className={`${className} w-full my-12 flex items-center ${(!items || col) && "justify-center"}   min-h-[200px] gap-4  px-2 ${
+      className={`${className} w-full my-12 flex foodItems-center ${(!foodItems || col) && "justify-center"}   min-h-[200px] gap-4  px-2 ${
         !col ? "overflow-x-scroll scrollbar-hidden scroll-smooth" : "overflow-x-hidden flex-wrap"
       }`}
     >
-      {items  && items.map((item: FoodItem) => (
-        <SingleFoodItem key={item.id} item = {item} col = {col} admin = {isAdmin(user)}/>
+      {foodItems  && foodItems.map((item: FoodItem) => (
+        <SingleFoodItem key={item.id} item={item} foodItems={foodItems} cartItems={cartItems} setCartItems={setCartItems} col={col} admin={isAdmin(user)}/>
       ))}
       {
-        !items && (!col ? (<Loader progress = {"Fetching Food Items....."} />): (<NotFound text="Fetching Food Items..."  />))
+        !foodItems && (!col ? (<Loader progress = {"Fetching Food Items....."} />): (<NotFound text="Fetching Food Items..."  />))
       }
       {
-        items && items.length <= 0 &&  (<NotFound text="No Food Items Available "  />)
+        foodItems && foodItems.length <= 0 &&  (<NotFound text="No Food Items Available "  />)
       }
     </motion.div>
   );
