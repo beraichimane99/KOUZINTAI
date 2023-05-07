@@ -270,7 +270,7 @@ export const ToggleAdminMode = (dispatch: any, state: boolean) => {
 };
 
 export const isAdmin = (user: any) => {
-  let isAdmin =user?.email == "bentilshadrack72@gmail.com" || user?.email == "admin@test.com"
+  let isAdmin =user?.email == "karimbouaddi380@gmail.com" || user?.email == "admin@test.com"
   return isAdmin
 };
 

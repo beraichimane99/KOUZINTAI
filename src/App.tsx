@@ -349,13 +349,13 @@ function App() {
             imageURL: "ingredients/Couscous.png"
         },
         {
-            id: 51,
+            id: 54,
             type: "Essentials",
             title: "Olive oil",
             imageURL: "ingredients/Oliveoil.png"
         },
         {
-            id: 52,
+            id: 55,
             type: "Essentials",
             title: "Lentilles",
             imageURL: "ingredients/Lentilles.png"
