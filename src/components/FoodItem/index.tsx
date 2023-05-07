@@ -35,13 +35,14 @@ export const SingleFoodItem = ({
       } h-auto bg-cardOverlay rounded-lg p-2 px-3 backdrop-blur-lg hover:drop-shadow-sm cursor-pointer`}
     >
       <motion.img
-        whileHover={{ scale: 1.2 }}
-        whileTap={{ scale: 1.1 }}
-        className="w-40 h-40 md:w-48 md:h-40 -mt-8 object-contain cursor-pointer"
-        alt={title}
-        src={imageURL}
-        onClick={handleClick}
-      />
+  whileHover={{ scale: 1.2 }}
+  whileTap={{ scale: 1.1 }}
+  className="w-40 h-40 md:w-48 md:h-40 -mt-8 mx-auto object-contain cursor-pointer"
+  alt={title}
+  src={imageURL}
+  onClick={handleClick}
+/>
+
       <Action foodItems={foodItems} cartItems={cartItems} setCartItems={setCartItems} food={item} admin={admin} />
       <div className="w-full text-center">
         <p className="text-textColor font-semi-bold text-lg">{title}</p>
