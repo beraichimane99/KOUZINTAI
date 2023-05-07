@@ -15,7 +15,7 @@ export type FoodItem = {
     imageURL: string;
     calories: string;
     qty: string;
-    category: string;
+    type: string;
 };
 
 export type FoodItems = {

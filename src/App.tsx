@@ -23,12 +23,23 @@ import {
 import { AnimatePresence } from "framer-motion";
 import Contact from "./components/Contact";
 import { ToastContainer } from "react-toastify";
-import { useEffect } from "react";
+import {useEffect, useState} from "react";
 import { useStateValue } from "./context/StateProvider";
 
 function App() {
-  const [{ showCart,showContactForm, user, foodItems, cartItems, adminMode }, dispatch] =
-    useStateValue();
+  const [{ showCart,showContactForm, user, adminMode }, dispatch] = useStateValue();
+
+  const [foodItems, setFoodItems] = useState([
+    {id: 1, title: "test1", type: "Vegetable", imageURL : "ingredients/Carrots.png"},
+    {id: 2, title: "test1", type: "Vegetable", imageURL : "ingredients/Onions.png"},
+    {id: 3, title: "test1", type: "Vegetable", imageURL : "ingredients/Peppers.png"},
+    {id: 4, title: "test1", type: "Vegetable", imageURL : "ingredients/Potatoes.png"},
+    {id: 5, title: "test1", type: "Vegetable", imageURL : "ingredients/Tomatoes.png"},
+    {id: 6, title: "test1", type: "Vegetable", imageURL : "ingredients/Zucchini.png"},
+  ]);
+  const [cartItems, setCartItems] = useState([]);
+
+  const menuProps = {foodItems, setFoodItems, cartItems, setCartItems}
 
   useEffect(() => {
     fetchFoodData(dispatch);
@@ -39,13 +50,13 @@ function App() {
   useEffect(() => {
     foodItems &&
       cartItems.length > 0 &&
-      calculateCartTotal(cartItems, foodItems, dispatch);
+      calculateCartTotal(cartItems, foodItems);
   }, [cartItems, foodItems, dispatch]);
   return (
     <AnimatePresence exitBeforeEnter>
       <ToastContainer />
       <div className="w-screen h-auto min-h-[100vh] flex flex-col bg-primary">
-        {showCart && <Cart />}
+        {showCart && <Cart cartItems={cartItems} setCartItems={setCartItems} />}
         {showContactForm && <Contact />}
         {!(adminMode && isAdmin(user)) && <Header />}
         <main
@@ -63,7 +74,7 @@ function App() {
             <Route path="/admin" element={<Admin />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/about" element={<About />} />
-            <Route path="/menu" element={<Menu />} />
+            <Route path="/menu" element={<Menu {...menuProps}/>} />
             <Route path="/services" element={<Services />} />
           </Routes>
 

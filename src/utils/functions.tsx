@@ -15,39 +15,30 @@ import {
 
 import { MdShoppingBasket } from "react-icons/md";
 import { toast } from "react-toastify";
+import {useStateValue} from "../context/StateProvider";
 
 export const addToCart = async (
-  cartItems: cartItem[],
-  foodItems: FoodItem[],
+  cartItems: any[],
+  setCartItems: any,
+  foodItems: any,
   user: any,
-  fid: number,
+  food: any,
   dispatch: any
 ) => {
-  if (!user) {
+  if (false) {
     toast.error("Please login to add items to cart", {
       icon: <MdShoppingBasket className="text-2xl text-cartNumBg" />,
       toastId: "unauthorizedAddToCart",
     });
   } else {
-    if (cartItems.some((item: cartItem) => item["fid"] === fid)) {
-      toast.error("Item already in cart", {
-        icon: <MdShoppingBasket className="text-2xl text-cartNumBg" />,
-        toastId: "itemAlreadyInCart",
-      });
-    } else {
-      const data: cartItem = {
-        id: Date.now(),
-        fid: fid,
-        uid: user.uid,
-        qty: 1,
-      };
-      dispatch({
-        type: "SET_CARTITEMS",
-        cartItems: [...cartItems, data],
-      });
-      calculateCartTotal(cartItems, foodItems, dispatch);
-      await firebaseAddToCart(data);
-    }
+    let newCartItems = cartItems;
+    newCartItems.push(food);
+    setCartItems(newCartItems);
+    dispatch({
+      type: "TOGGLE_CART",
+      showCart: true,
+    });
+    calculateCartTotal(cartItems, foodItems);
   }
 };
 export const dispatchtUserCartItems = (
@@ -94,7 +85,7 @@ export const fetchFoodData = async (dispatch: any) => {
     });
 };
 
-export const getFoodyById = (menu: FoodItem[], fid: number) => {
+export const getFoodyById = (menu: any, fid: number) => {
   return menu.find((item: FoodItem) => item.id === fid);
 };
 
@@ -138,7 +129,7 @@ export const updateCartItemQty = async (
       type: "SET_CARTITEMS",
       cartItems: cartItems,
     });
-    calculateCartTotal(cartItems, foodItems, dispatch);
+    calculateCartTotal(cartItems, foodItems);
     await firebaseUpdateCartItem(cartItems[index])
       .then(() => {})
       .catch((e) => {
@@ -149,43 +140,34 @@ export const updateCartItemQty = async (
 
 //  Delete Cart Item
 export const deleteCartItem = async (
-  cartItems: cartItem[],
-  foodItems: FoodItem[],
+  cartItems: any[],
+  setCartItems: any,
   item: cartItem,
   dispatch: any
 ) => {
-  const index = cartItems.findIndex(
-    (cartItem: cartItem) => cartItem.id === item.id
-  );
-  if (index !== -1) {
-    cartItems.splice(index, 1);
-    dispatch({
-      type: "SET_CARTITEMS",
-      cartItems: cartItems,
-    });
-    calculateCartTotal(cartItems, foodItems, dispatch);
-    await firebaseDeleteCartItem(item)
-      .then(() => {})
-      .catch((e) => {
-        console.log(e);
-      });
+  let myCartItems: any[] = cartItems;
+  for(let i =0; i<myCartItems.length; i++) {
+    if(myCartItems[i].id === item.id) {
+      myCartItems.splice(i, 1);
+    }
   }
+  setCartItems(myCartItems);
+  dispatch({
+    type: "TOGGLE_CART",
+    showCart: true,
+  });
+  calculateCartTotal(cartItems, cartItems);
 };
 
 // Calculate Total Price Round to 2 decimal places
 export const calculateCartTotal = (
-  cartItems: cartItem[],
-  foodItems: FoodItem[],
-  dispatch: any
+  cartItems: any[],
+  foodItems: any[],
 ) => {
   let total = 0;
   cartItems.forEach((item: cartItem) => {
     const foodItem = getFoodyById(foodItems, item.fid);
     total += item.qty * parseFloat(foodItem?.price || "0");
-  });
-  dispatch({
-    type: "SET_CART_TOTAL",
-    cartTotal: total.toFixed(2),
   });
 };
 
@@ -200,7 +182,7 @@ export const emptyCart = async (
       type: "SET_CARTITEMS",
       cartItems: [],
     });
-    calculateCartTotal(cartItems, foodItems, dispatch);
+    calculateCartTotal(cartItems, foodItems);
     await firebaseEmptyUserCart(cartItems)
       .then(() => {})
       .catch((e) => {
