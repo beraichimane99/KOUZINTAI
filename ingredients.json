@@ -314,20 +314,26 @@
     {
         "id": 53,
         "type":"Essentials", 
-        "title": "Couscous",
-        "imageURL": "Couscous.png"
+        "displayName": "Milk", 
+        "url": "Milk.png" 
     },
     {
         "id": 54,
         "type":"Essentials", 
-        "title": "Olive oil",
-        "imageURL": "Oliveoil.png"
+        "displayName": "Butter", 
+        "url": "Butter.png" 
     }, 
     {
         "id": 55,
         "type":"Essentials", 
-        "title": "Lentilles",
-        "imageURL": "Lentilles.png"
+        "displayName": "Rice", 
+        "url": "Rice.png" 
+    }, 
+    {
+        "id": 56,
+        "type":"Essentials", 
+        "displayName": "Eggs", 
+        "url": "Eggs.png" 
     }
     
 
