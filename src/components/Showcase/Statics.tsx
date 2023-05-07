@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { foodItemsStatic } from "../../../types";
 
-const StaticsImages: React.FC<foodItemsStatic> = ({ items }) => {
+const StaticsImages: React.FC<any> = ({items}: { items: any[] }) => {
   return (
     <div className="w-full h-full absolute flex items-center justify-center top-6 left-0 lg:px-30 lg:py-4 gap-4 flex-wrap ">
       {items.map((item, index) => (
