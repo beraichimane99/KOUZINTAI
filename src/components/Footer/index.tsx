@@ -17,7 +17,7 @@ const Footer = () => {
       <hr className="my-2 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
       <div className="flex flex-col items-center justify-center md:flex-row md:justify-between ">
   <span className="block text-sm text-gray-500 text-center dark:text-gray-400">
-    © 2022 Bentilzone™. All Rights Reserved.
+    © 2022 KONZINTAI™. All Rights Reserved.
   </span>        
 </div>
 

@@ -11,7 +11,6 @@ export type FoodItem = {
     id: number;
     title: string;
     description?: string;
-    price: string;
     imageURL: string;
     calories: string;
     qty: string;

@@ -24,8 +24,8 @@ const Menu = ({foodItems, setFoodItems, cartItems, setCartItems}) => {
                 className="bg-containerbg"
                 col
                 scrollOffset={scrollValue}
-                // items={filter === "all" ? foodItems : FilterFood(filter)}
-                foodItems={foodItems}
+                foodItems={filter === "all" ? foodItems : FilterFood(filter, foodItems)}
+                // foodItems={foodItems}
                 setFoodItems={setFoodItems}
                 cartItems={cartItems}
                 setCartItems={setCartItems}

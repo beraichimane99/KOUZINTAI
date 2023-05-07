@@ -5,7 +5,7 @@ import { FilterFood } from "../../../utils/filters"
 import { useState } from "react"
 
 const Fruits = () => {
-  const fruits = FilterFood("fruits")
+  // const fruits = FilterFood("fruits")
   const [scrollValue, setScrollValue] = useState(0)
 
 
