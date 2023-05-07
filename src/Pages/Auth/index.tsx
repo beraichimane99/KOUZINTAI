@@ -51,7 +51,7 @@ const ProviderAuth = () => {
   };
   return (
     <div className="flex items-center justify-center gap-5  text-center">
-      <motion.p
+      {/* <motion.p
         whileHover={{ scale: 1.1 }}
         className="flex items-center w-36 h-10 bg-white justify-center rounded text-headingColor px-5 cursor-pointer shadow-sm hover:bg-slate-100"
         onClick={() =>
@@ -66,7 +66,7 @@ const ProviderAuth = () => {
       >
         <BsGithub className="text-xl w-5 mr-1" />
         <span>Github</span>
-      </motion.p>
+      </motion.p> */}
       <motion.p
         whileHover={{ scale: 1.1 }}
         className="flex items-center w-36 h-10 bg-white justify-center rounded text-headingColor px-5 cursor-pointer shadow-sm hover:bg-slate-100"
