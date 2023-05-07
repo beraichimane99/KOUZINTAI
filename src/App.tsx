@@ -355,10 +355,52 @@ function App() {
             imageURL: "ingredients/Oliveoil.png"
         },
         {
-            id: 55,
+            id: 56,
             type: "Essentials",
             title: "Lentilles",
             imageURL: "ingredients/Lentilles.png"
+        },
+        {
+            id: 57,
+            type: "Essentials",
+            title: "Milk",
+            imageURL: "ingredients/Milk.png"
+        },
+        {
+            id: 58,
+            type: "Essentials",
+            title: "Butter",
+            imageURL: "ingredients/Butter.png"
+        },
+        {
+            id: 59,
+            type: "Essentials",
+            title: "Rice",
+            imageURL: "ingredients/Rice.png"
+        },
+        {
+            id: 60,
+            type: "Essentials",
+            title: "Eggs",
+            imageURL: "ingredients/Eggs.png"
+        },
+        {
+            id: 61,
+            type: "Essentials",
+            title: "Salt",
+            imageURL: "ingredients/Salt.png"
+        },
+        {
+            id: 62,
+            type: "Essentials",
+            title: "Cumin",
+            imageURL: "ingredients/Cumin.png"
+        },
+        {
+            id: 63,
+            type: "Essentials",
+            title: "Blackpepper",
+            imageURL: "ingredients/Blackpepper.png"
         }
     ]);
     const [cartItems, setCartItems] = useState([]);
