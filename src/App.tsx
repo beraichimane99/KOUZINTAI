@@ -32,241 +32,241 @@ function App() {
     const [foodItems, setFoodItems] = useState([
         {
             id: 1,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Peppers",
             imageURL: "ingredients/Peppers.png"
         },
         {
             id: 2,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Carrots",
             imageURL: "ingredients/Carrots.png"
         },
         {
             id: 3,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Tomatoes",
             imageURL: "ingredients/Tomatoes.png"
         },
         {
             id: 4,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Onions",
             imageURL: "ingredients/Onions.png"
         },
         {
             id: 5,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Potatoes",
             imageURL: "ingredients/Potatoes.png"
         },
         {
             id: 6,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Zucchini",
             imageURL: "ingredients/Zucchini.png"
         },
         {
             id: 7,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Eggplant",
             imageURL: "ingredients/Eggplant.png"
         },
         {
             id: 8,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Green beans",
             imageURL: "ingredients/Greenbeans.png"
         },
         {
             id: 9,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Artichokes",
             imageURL: "ingredients/Artichokes.png"
         },
         {
             id: 10,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Cabbage",
             imageURL: "ingredients/Cabbage.png"
         },
         {
             id: 11,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Cauliflower",
             imageURL: "ingredients/Cauliflower.png"
         },
         {
             id: 12,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Turnips",
             imageURL: "ingredients/Turnips.png"
         },
         {
             id: 13,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Okra",
             imageURL: "ingredients/Okra.png"
         },
         {
             id: 14,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Radishes",
             imageURL: "ingredients/Radishes.png"
         },
         {
             id: 15,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Sweet potatoes",
             imageURL: "ingredients/Sweetpotatoes.png"
         },
         {
             id: 16,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Pumpkin",
             imageURL: "ingredients/Pumpkin.png"
         },
         {
             id: 17,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Spinach",
             imageURL: "ingredients/Spinach.png"
         },
         {
             id: 18,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Beetroot",
             imageURL: "ingredients/Beetroot.png"
         },
         {
             id: 19,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Fennel",
             imageURL: "ingredients/Fennel.png"
         },
         {
             id: 20,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Cucumber",
             imageURL: "ingredients/Cucumber.png"
         },
         {
             id: 21,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Garlic",
             imageURL: "ingredients/Garlic.png"
         },
         {
             id: 22,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Cilantro",
             imageURL: "ingredients/Cilantro.png"
         },
         {
             id: 23,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Parsley",
             imageURL: "ingredients/Parsley.png"
         },
         {
             id: 24,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Green peas",
             imageURL: "ingredients/Greenpeas.png"
         },
         {
             id: 25,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Celery",
             imageURL: "ingredients/Celery.png"
         },
         {
             id: 26,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Leeks",
             imageURL: "ingredients/Leeks.png"
         },
         {
             id: 27,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Turnip greens",
             imageURL: "ingredients/Turnipgreens.png"
         },
         {
             id: 28,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Dandelion greens",
             imageURL: "ingredients/Dandeliongreens.png"
         },
         {
             id: 29,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Watercress",
             imageURL: "ingredients/Watercress.png"
         },
         {
             id: 30,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Swiss chard",
             imageURL: "ingredients/Swisschard.png"
         },
         {
             id: 31,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Mustard greens ",
             imageURL: "ingredients/Mustardgreens.png"
         },
         {
             id: 32,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Escarole",
             imageURL: "ingredients/Escarole.png"
         },
         {
             id: 33,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Jerusalem artichoke",
             imageURL: "ingredients/Jerusalemartichoke.png"
         },
         {
             id: 34,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Kohlrabi",
             imageURL: "ingredients/Kohlrabi.png"
         },
         {
             id: 35,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Broccoli",
             imageURL: "ingredients/Broccoli.png"
         },
         {
             id: 36,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Bell peppers",
             imageURL: "ingredients/Bellpeppers.png"
         },
         {
             id: 37,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Mushrooms",
             imageURL: "ingredients/Mushrooms.png"
         },
         {
             id: 38,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Green onions",
             imageURL: "ingredients/Greenonions.png"
         },
         {
             id: 39,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Winter melon",
             imageURL: "ingredients/Wintermelon.png"
         },
         {
             id: 40,
-            type: "Vegetable",
+            type: "Vegetables",
             title: "Fava beans",
             imageURL: "ingredients/Favabeans.png"
         },
@@ -349,13 +349,13 @@ function App() {
             imageURL: "ingredients/Couscous.png"
         },
         {
-            id: 51,
+            id: 54,
             type: "Essentials",
             title: "Olive oil",
             imageURL: "ingredients/Oliveoil.png"
         },
         {
-            id: 52,
+            id: 55,
             type: "Essentials",
             title: "Lentilles",
             imageURL: "ingredients/Lentilles.png"
