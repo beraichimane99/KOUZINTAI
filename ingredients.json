@@ -1,39 +1,245 @@
 [
     {
         "id": 1,
-        "type":"vegetable", 
+        "type":"Vegetable", 
         "displayName": "Peppers", 
         "url": "Peppers.png"
     },
     {
         "id": 2,
-        "type":"vegetable", 
+        "type":"Vegetable", 
         "displayName": "Carrots", 
         "url": "Carrots.png"
     },
     {
         "id": 3,
-        "type":"vegetable", 
+        "type":"Vegetable", 
         "displayName": "Tomatoes", 
         "url": "Tomatoes.png"
     },
     {
         "id": 4,
-        "type":"vegetable", 
+        "type":"Vegetable", 
         "displayName": "Onions", 
         "url": "Onions.png"
     },
     {
         "id": 5,
-        "type":"vegetable", 
+        "type":"Vegetable", 
         "displayName": "Potatoes", 
         "url": "Potatoes.png"
     },
     {
         "id": 6,
-        "type":"vegetable", 
+        "type":"Vegetable", 
         "displayName": "Zucchini", 
         "url": "Zucchini.png"
-    }  
+    },
+    {
+        "id": 7,
+        "type":"Vegetable", 
+        "displayName": "Eggplant", 
+        "url": "Eggplant.png" 
+    },
+    {
+        "id": 8,
+        "type":"Vegetable", 
+        "displayName": "Green beans", 
+        "url": "Greenbeans.png" 
+    },
+    {
+        "id": 9,
+        "type":"Vegetable", 
+        "displayName": "Artichokes", 
+        "url": "Artichokes.png" 
+    },
+    {
+        "id": 10,
+        "type":"Vegetable", 
+        "displayName": "Cabbage", 
+        "url": "Cabbage.png" 
+    },
+    {
+        "id": 11,
+        "type":"Vegetable", 
+        "displayName": "Cauliflower", 
+        "url": "Cauliflower.png" 
+    },
+    {
+        "id": 12,
+        "type":"Vegetable", 
+        "displayName": "Turnips", 
+        "url": "Turnips.png" 
+    },
+    {
+        "id": 13,
+        "type":"Vegetable", 
+        "displayName": "Okra", 
+        "url": "Okra.png" 
+    },
+    {
+        "id": 14,
+        "type":"Vegetable", 
+        "displayName": "Radishes", 
+        "url": "Radishes.png" 
+    },
+    {
+        "id": 15,
+        "type":"Vegetable", 
+        "displayName": "Sweet potatoes", 
+        "url": "Sweetpotatoes.png" 
+    },
+    {
+        "id": 16,
+        "type":"Vegetable", 
+        "displayName": "Pumpkin", 
+        "url": "Pumpkin.png" 
+    }, 
+    {
+        "id": 17,
+        "type":"Vegetable", 
+        "displayName": "Spinach", 
+        "url": "Spinach.png" 
+    }, 
+    {
+        "id": 18,
+        "type":"Vegetable", 
+        "displayName": "Beetroot", 
+        "url": "Beetroot.png" 
+    }, 
+    {
+        "id": 19,
+        "type":"Vegetable", 
+        "displayName": "Fennel", 
+        "url": "Fennel.png" 
+    }, 
+    {
+        "id": 20,
+        "type":"Vegetable", 
+        "displayName": "Cucumber", 
+        "url": "Cucumber.png" 
+    },
+    {
+        "id": 21,
+        "type":"Vegetable", 
+        "displayName": "Garlic", 
+        "url": "Garlic.png"
+    },
+    {
+        "id": 22,
+        "type":"Vegetable", 
+        "displayName": "Cilantro", 
+        "url": "Cilantro.png"
+    },
+    {
+        "id": 23,
+        "type":"Vegetable", 
+        "displayName": "Parsley", 
+        "url": "Parsley.png"
+    },
+    {
+        "id": 24,
+        "type":"Vegetable", 
+        "displayName": "Green peas", 
+        "url": "Greenpeas.png"
+    },
+    {
+        "id": 25,
+        "type":"Vegetable", 
+        "displayName": "Celery", 
+        "url": "Celery.png"
+    },
+    {
+        "id": 26,
+        "type":"Vegetable", 
+        "displayName": "Leeks", 
+        "url": "Leeks.png"
+    },
+    {
+        "id": 27,
+        "type":"Vegetable", 
+        "displayName": "Turnip greens", 
+        "url": "Turnipgreens.png" 
+    },
+    {
+        "id": 28,
+        "type":"Vegetable", 
+        "displayName": "Dandelion greens", 
+        "url": "Dandeliongreens.png" 
+    },
+    {
+        "id": 29,
+        "type":"Vegetable", 
+        "displayName": "Watercress", 
+        "url": "Watercress.png" 
+    },
+    {
+        "id": 30,
+        "type":"Vegetable", 
+        "displayName": "Swiss chard", 
+        "url": "Swisschard.png" 
+    },
+    {
+        "id": 31,
+        "type":"Vegetable", 
+        "displayName": "Mustard greens ", 
+        "url": "Mustardgreens.png" 
+    },
+    {
+        "id": 32,
+        "type":"Vegetable",
+        "displayName": "Escarole", 
+        "url": "Escarole.png" 
+    },
+    {
+        "id": 33,
+        "type":"Vegetable", 
+        "displayName": "Jerusalem artichoke", 
+        "url": "Jerusalemartichoke.png" 
+    },
+    {
+        "id": 34,
+        "type":"Vegetable", 
+        "displayName": "Kohlrabi", 
+        "url": "Kohlrabi.png" 
+    },
+    {
+        "id": 35,
+        "type":"Vegetable", 
+        "displayName": "Broccoli", 
+        "url": "Broccoli.png" 
+    },
+    {
+        "id": 36,
+        "type":"Vegetable", 
+        "displayName": "Bell peppers", 
+        "url": "Bellpeppers.png" 
+    }, 
+    {
+        "id": 37,
+        "type":"Vegetable", 
+        "displayName": "Mushrooms", 
+        "url": "Mushrooms.png" 
+    }, 
+    {
+        "id": 38,
+        "type":"Vegetable", 
+        "displayName": "Green onions", 
+        "url": "Greenonions.png" 
+    }, 
+    {
+        "id": 39,
+        "type":"Vegetable", 
+        "displayName": "Winter melon", 
+        "url": "Wintermelon.png" 
+    }, 
+    {
+        "id": 40,
+        "type":"Vegetable", 
+        "displayName": "Fava beans", 
+        "url": "Favabeans.png" 
+    }
+    
 
 ]
+
