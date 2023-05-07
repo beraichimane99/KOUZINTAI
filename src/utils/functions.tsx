@@ -36,7 +36,7 @@ export const addToCart = async (
     setCartItems(newCartItems);
     dispatch({
       type: "TOGGLE_CART",
-      showCart: true,
+      showCart: !true,
     });
     calculateCartTotal(cartItems, foodItems);
   }

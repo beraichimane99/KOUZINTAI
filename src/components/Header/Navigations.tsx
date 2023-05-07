@@ -66,13 +66,13 @@ const Navigations = ({ direction }: { direction?: string }) => {
         onClick={handleToggleCart}
       >
         <MdShoppingBasket className="text-2xl cursor-pointer" />
-        {/*{cartItems && (
+        {cartItems && (
           <div className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-cartNumBg flex items-center justify-center cursor-pointer">
             <p className="text-sm text-white font-semibold">
               {cartItems.length}
             </p>
           </div>
-        )}*/}
+        )}
       </motion.div>
     </div>
   );
