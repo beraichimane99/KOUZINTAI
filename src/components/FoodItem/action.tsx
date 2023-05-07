@@ -5,11 +5,12 @@ import { addToCart, deleteFood } from "../../utils/functions";
 import { MdAddShoppingCart, MdDeleteForever } from "react-icons/md";
 import { BiEditAlt } from "react-icons/bi";
 import { FoodItem } from "../../../types";
+
 const Action = ({ food, admin, foodItems, cartItems, setCartItems }: { food: FoodItem; admin?: boolean, foodItems:any, cartItems:any, setCartItems:any }) => {
   const [{ user }, dispatch] = useStateValue();
   return (
     <div className="flex flex-col gap-2">
-      {admin ? (
+      {admin && (
         <>
           <motion.div
             whileTap={{ scale: 1.1 }}
@@ -29,16 +30,6 @@ const Action = ({ food, admin, foodItems, cartItems, setCartItems }: { food: Foo
             <MdDeleteForever className="text-white md:text-xl" />
           </motion.div>
         </>
-      ) : (
-        <motion.div
-          whileTap={{ scale: 1.1 }}
-          whileHover={{ scale: 1.2 }}
-          className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-red-600 flex items-center justify-center cursor-pointer"
-          onClick={() => addToCart(cartItems, setCartItems, foodItems, user, food, dispatch)}
-          title="Add to cart"
-        >
-          <MdAddShoppingCart className="text-white md:text-xl" />
-        </motion.div>
       )}
     </div>
   );

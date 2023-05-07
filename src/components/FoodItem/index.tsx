@@ -1,6 +1,9 @@
 import { FoodItem } from "../../../types";
 import { motion } from "framer-motion";
 import Action from "./action";
+import { addToCart } from "../../utils/functions";
+import { useStateValue } from "../../context/StateProvider";
+
 export const SingleFoodItem = ({
   item,
   col,
@@ -17,6 +20,10 @@ export const SingleFoodItem = ({
   setCartItems:any
 }) => {
   const { id, title, imageURL } = item;
+  const [{ user }, dispatch] = useStateValue();
+  const handleClick = () => {
+    addToCart(cartItems, setCartItems, foodItems, user, item, dispatch);
+  };
 
   return (
     <motion.div
@@ -27,16 +34,15 @@ export const SingleFoodItem = ({
         col ? "my-12" : "my-2 md:my-5"
       } h-auto bg-cardOverlay rounded-lg p-2 px-3 backdrop-blur-lg hover:drop-shadow-sm cursor-pointer`}
     >
-      <div className="w-full flex items-center justify-between">
-        <motion.img
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 1.1 }}
-          className="w-40 h-40 md:w-48 md:h-40 -mt-8 object-contain cursor-pointer"
-          alt={title}
-          src={imageURL}
-        />
+      <motion.img
+        whileHover={{ scale: 1.2 }}
+        whileTap={{ scale: 1.1 }}
+        className="w-40 h-40 md:w-48 md:h-40 -mt-8 object-contain cursor-pointer"
+        alt={title}
+        src={imageURL}
+        onClick={handleClick}
+      />
       <Action foodItems={foodItems} cartItems={cartItems} setCartItems={setCartItems} food={item} admin={admin} />
-      </div>
       <div className="w-full text-center">
         <p className="text-textColor font-semi-bold text-lg">{title}</p>
       </div>
