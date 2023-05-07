@@ -20,7 +20,7 @@ const Navigations = ({ direction }: { direction?: string }) => {
   }
   return (
     <div className="flex items-center gap-8">
-      <motion.ul
+      {/* <motion.ul
         initial={{ opacity: 0, x: 200 }}
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: 200 }}
@@ -57,7 +57,7 @@ const Navigations = ({ direction }: { direction?: string }) => {
         >
           Contact us
         </motion.li>
-      </motion.ul>
+      </motion.ul> */}
 
       <motion.div
         whileTap={{ scale: 0.9 }}
