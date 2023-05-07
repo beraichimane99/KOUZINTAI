@@ -17,7 +17,7 @@ const CartBody = ({cartItems, setCartItems, action}: { cartItems: any, setCartIt
                     })
                 }
             </div>
-            <CartTotal checkoutState={action}/>
+            <CartTotal checkoutState={action} cartItems={cartItems} />
         </div>
     )
 }

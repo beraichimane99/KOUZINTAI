@@ -1,11 +1,31 @@
 import {motion} from 'framer-motion'
 import { useStateValue } from '../../context/StateProvider';
+import axios from 'axios';
 
-const CartTotal = ({checkoutState}: {checkoutState:any}) => {
+const CartTotal = ({checkoutState,cartItems}: {checkoutState:any,cartItems:any}) => {
   const [{cartTotal}] = useStateValue();
-  function getRecepies(params:string) {
-    console.log(params);
+  async function getRecepies(params:string) {
+    console.log(cartItems);
+    let ingredients=""
+    console.log(typeof checkoutState);
     
+    cartItems.forEach((element:any) => {
+      ingredients=ingredients+element.title+', '
+    });
+    
+    // make HTTP GET request to a JSON API endpoint
+  await axios.post('http://10.32.117.226:5000/', {"ingredients":ingredients}, {
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }).then(response => {
+    // handle response data
+    console.log(response.data);
+  })
+  .catch(error => {
+    // handle error
+    console.error(error);
+  });
     
   }
   return (
