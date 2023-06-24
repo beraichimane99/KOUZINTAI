@@ -1,10 +1,10 @@
 import {motion} from 'framer-motion'
 import { useStateValue } from '../../context/StateProvider';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
-
+import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 const CartTotal = ({checkoutState,cartItems}: {checkoutState:any,cartItems:any}) => {
-  const [{cartTotal}] = useStateValue();
+  const [{cartTotal}] = useStateValue(); 
   async function getRecepies(params:string) {
     console.log(cartItems);
     let ingredients=""
@@ -38,5 +38,4 @@ const CartTotal = ({checkoutState,cartItems}: {checkoutState:any,cartItems:any})
     </div>
   )
 }
-
 export default CartTotal
